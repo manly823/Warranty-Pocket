@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA000001 /* CaffeineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000002 /* CaffeineView.swift */; };
+		AA000003 /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000004 /* WaterView.swift */; };
+		AA000005 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000006 /* StatsView.swift */; };
+		AA000007 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000008 /* ImagePicker.swift */; };
+		AA000009 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000A /* NotificationHelper.swift */; };
 		C000000000 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000000001 /* Theme.swift */; };
 		C000000010 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000000011 /* Storage.swift */; };
 		C000000020 /* WarrantyPocketModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000000021 /* WarrantyPocketModels.swift */; };
@@ -15,15 +20,15 @@
 		C000000050 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000000051 /* MainView.swift */; };
 		C000000060 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000000061 /* OnboardingView.swift */; };
 		C000000070 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C000000071 /* SettingsView.swift */; };
-		AA000001 /* CaffeineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000002 /* CaffeineView.swift */; };
-		AA000003 /* WaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000004 /* WaterView.swift */; };
-		AA000005 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000006 /* StatsView.swift */; };
-		AA000007 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000008 /* ImagePicker.swift */; };
-		AA000009 /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00000A /* NotificationHelper.swift */; };
 		C900000011 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C900000010 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA000002 /* CaffeineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineView.swift; sourceTree = "<group>"; };
+		AA000004 /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
+		AA000006 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		AA000008 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		AA00000A /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		C000000001 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		C000000011 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		C000000021 /* WarrantyPocketModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyPocketModels.swift; sourceTree = "<group>"; };
@@ -32,11 +37,6 @@
 		C000000051 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C000000061 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C000000071 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		AA000002 /* CaffeineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaffeineView.swift; sourceTree = "<group>"; };
-		AA000004 /* WaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterView.swift; sourceTree = "<group>"; };
-		AA000006 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
-		AA000008 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		AA00000A /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		C900000010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C900000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C900000020 /* WarrantyPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WarrantyPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,7 +277,7 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WarrantyPocket/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Warranty Pocket";
+				INFOPLIST_KEY_CFBundleDisplayName = "Warranty Pocketio";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos of receipts to save warranty information";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Select receipt photos from your library to save warranty information";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -311,7 +311,7 @@
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WarrantyPocket/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Warranty Pocket";
+				INFOPLIST_KEY_CFBundleDisplayName = "Warranty Pocketio";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos of receipts to save warranty information";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Select receipt photos from your library to save warranty information";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

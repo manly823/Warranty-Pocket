@@ -5,16 +5,16 @@ workflows:
     instance_type: mac_mini_m2
 
     integrations:
-      app_store_connect: NOSAA AHUNAR
+      app_store_connect: Warranty Pocketio
 
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: aslantabureci.warrantypocket
+        bundle_identifier: direlogrik.warrantypocketapp
       vars:
         XCODE_PROJECT: "WarrantyPocket.xcodeproj"
         XCODE_SCHEME: "WarrantyPocket"
-        APP_STORE_APP_ID: "0000000000"
+        APP_STORE_APP_ID: "6761137373"
       xcode: 16.1
 
     scripts:
