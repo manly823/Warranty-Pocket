@@ -1,0 +1,33 @@
+App Name: Warranty Pocket
+Subtitle: Receipt Scanner & Tracker
+Bundle ID: aslantabureci.warrantypocket
+SKU: warrantypocket2026
+Category: Utilities (primary), Lifestyle (secondary)
+Content Rights: Does not contain third-party content
+Age Rating: 4+
+Pricing: Free
+
+Description:
+Warranty Pocket is your personal warranty vault that keeps every purchase protected and every receipt organized. Never lose a warranty again — scan receipts with your camera, track expiration dates, and get automatic reminders before coverage ends.
+
+The app uses built-in OCR (Optical Character Recognition) powered by Apple's Vision framework to scan any receipt photo and automatically extract the store name, purchase date, and price. Simply point your camera at a receipt or select a photo from your library, and Warranty Pocket intelligently reads the text and pre-fills your warranty details. You can always edit and refine the extracted information manually for perfect accuracy.
+
+Warranty Pocket comes pre-loaded with 12 sample warranties across multiple categories so you can immediately explore all features without entering any data first. From electronics like MacBook Pro and Apple Watch to furniture like Herman Miller chairs and IKEA desks, the sample data demonstrates how the app organizes and tracks real-world purchases with varying warranty durations.
+
+Every warranty is tracked through its full lifecycle with color-coded status indicators. Active warranties show green shields, items expiring within 30 days display yellow warning triangles, and expired coverage shows red alerts. The animated countdown rings on each warranty card give you an instant visual sense of how much coverage time remains.
+
+Smart push notifications ensure you never miss a warranty deadline. The app automatically schedules three reminders for each warranty: 30 days before expiration, 7 days before, and 1 day before. This gives you ample time to file any claims, request repairs, or plan replacement purchases.
+
+The Insights dashboard provides a complete analytical overview of your warranty portfolio. View your total protected value, category breakdown with horizontal bar charts, value distribution across product types, an expiry timeline showing when warranties end over the next year, and a ranked list of your most valuable protected items.
+
+Features:
+Pre-loaded with 12 realistic sample warranties across 6 categories. Built-in receipt scanner with OCR text recognition. Camera and photo library support for receipt capture. Automatic extraction of store name, date, and price from receipts. 9 product categories: Electronics, Appliances, Furniture, Clothing, Automotive, Sports, Tools, Jewelry, Other. Color-coded warranty status: Active, Expiring Soon, Expired. Animated countdown rings showing remaining coverage days. Push notification reminders at 30, 7, and 1 day before expiry. Full warranty detail view with receipt image, scanned text, and notes. Archive system for expired or manually archived items. Category-filtered browsing with search functionality. Insights dashboard with value charts, category breakdown, and expiry timeline. Most Valuable items ranking. Coverage overview with status distribution bars. Premium dark interface with warm copper and gold accents. All data stored locally on device with no account required.
+
+Keywords: warranty,receipt,scanner,tracker,ocr,expiry,reminder,purchase,coverage,protect
+
+Privacy URL: https://sites.google.com/view/warrantypocket-privacy
+
+Permissions:
+Camera - Take photos of receipts to save warranty information
+Photo Library - Select receipt photos from your library to save warranty information
+Notifications - Receive reminders before warranties expire
