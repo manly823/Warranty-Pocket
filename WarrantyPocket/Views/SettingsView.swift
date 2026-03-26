@@ -39,7 +39,7 @@ struct SettingsView: View {
                 Circle().fill(Theme.accent.opacity(0.1)).frame(width: 70, height: 70)
                 Image(systemName: "shield.fill").font(.system(size: 30)).foregroundStyle(Theme.accent)
             }
-            Text("Warranty Pocket").font(.system(size: 20, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)
+            Text("Warranty Pocketio").font(.system(size: 20, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)
             Text("Version 1.0").font(.system(size: 13, design: .rounded)).foregroundStyle(Theme.muted)
         }
         .frame(maxWidth: .infinity).glowCard()

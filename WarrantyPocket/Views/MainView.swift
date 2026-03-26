@@ -57,7 +57,7 @@ struct MainView: View {
                 (Text("Warranty")
                     .font(.system(size: 24, weight: .bold, design: .rounded))
                     .foregroundColor(Theme.text)
-                 + Text(" Pocket")
+                 + Text(" Pocketio")
                     .font(.system(size: 24, weight: .bold, design: .rounded))
                     .foregroundColor(Theme.accent))
             }
