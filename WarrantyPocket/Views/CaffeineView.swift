@@ -215,7 +215,7 @@ struct WarrantyDetailView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 6) {
                 Image(systemName: "doc.text.viewfinder").foregroundStyle(Theme.accent)
-                Text("Scanned Text").font(.system(size: 15, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)
+                Text("Receipt Text").font(.system(size: 15, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)
             }
             Text(item.ocrText).font(.system(size: 12, design: .monospaced)).foregroundStyle(Theme.sub).lineLimit(20)
         }
@@ -343,12 +343,12 @@ struct AddWarrantySheet: View {
                 if ocrProcessing {
                     HStack(spacing: 8) {
                         ProgressView().tint(Theme.accent)
-                        Text("Scanning receipt…").font(.system(size: 13, design: .rounded)).foregroundStyle(Theme.sub)
+                        Text("Reading text…").font(.system(size: 13, design: .rounded)).foregroundStyle(Theme.sub)
                     }
                 } else if !ocrText.isEmpty {
                     HStack(spacing: 6) {
                         Image(systemName: "checkmark.circle.fill").foregroundStyle(Theme.success).font(.system(size: 14))
-                        Text("Text extracted successfully").font(.system(size: 13, design: .rounded)).foregroundStyle(Theme.success)
+                        Text("Text recognition complete — review fields below").font(.system(size: 13, design: .rounded)).foregroundStyle(Theme.success)
                     }
                 }
 

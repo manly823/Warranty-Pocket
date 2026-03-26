@@ -148,7 +148,7 @@ struct HomeContent: View {
             }
             Button { showAddSheet = true } label: {
                 HStack(spacing: 8) {
-                    Image(systemName: "camera.fill").font(.system(size: 15))
+                    Image(systemName: "plus.circle.fill").font(.system(size: 15))
                     Text("Add Warranty").font(.system(size: 15, weight: .bold, design: .rounded))
                 }
                 .foregroundStyle(.white)
