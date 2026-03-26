@@ -129,8 +129,10 @@ struct HomeContent: View {
     var body: some View {
         VStack(spacing: 16) {
             heroCard
-            if !manager.expiringWarranties.isEmpty { expiringSection }
-            if !manager.recentWarranties.isEmpty { recentSection }
+            categoriesStrip
+            expiringSection
+            topValueSection
+            recentSection
             coverageOverview
         }
         .padding(.horizontal, 20).padding(.bottom, 30)
@@ -172,14 +174,79 @@ struct HomeContent: View {
         .frame(maxWidth: .infinity)
     }
 
+    private var categoriesStrip: some View {
+        let cats = Dictionary(grouping: manager.nonArchivedWarranties, by: \.category)
+        return VStack(alignment: .leading, spacing: 10) {
+            Text("Categories").font(.system(size: 15, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 10) {
+                    ForEach(Array(cats.keys.sorted { $0.name < $1.name }), id: \.self) { cat in
+                        VStack(spacing: 6) {
+                            Text(cat.emoji).font(.system(size: 24))
+                                .frame(width: 48, height: 48)
+                                .background(cat.color.opacity(0.15), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                            Text(cat.name).font(.system(size: 10, weight: .medium, design: .rounded)).foregroundStyle(Theme.sub)
+                            Text("\(cats[cat]?.count ?? 0)")
+                                .font(.system(size: 12, weight: .bold, design: .rounded))
+                                .foregroundStyle(Theme.accent)
+                        }
+                        .frame(width: 70)
+                    }
+                }
+            }
+        }
+        .glowCard()
+    }
+
     private var expiringSection: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 6) {
                 Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(Theme.warning).font(.system(size: 14))
                 Text("Expiring Soon").font(.system(size: 15, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)
             }
-            ForEach(manager.expiringWarranties) { item in
-                warrantyMiniRow(item)
+            if manager.expiringWarranties.isEmpty {
+                HStack(spacing: 8) {
+                    Image(systemName: "checkmark.shield.fill").foregroundStyle(Theme.success).font(.system(size: 18))
+                    Text("All warranties are safe!").font(.system(size: 13, design: .rounded)).foregroundStyle(Theme.sub)
+                }
+                .padding(.vertical, 6)
+            } else {
+                ForEach(manager.expiringWarranties) { item in
+                    warrantyMiniRow(item)
+                }
+            }
+        }
+        .glowCard()
+    }
+
+    private var topValueSection: some View {
+        let topItems = Array(manager.nonArchivedWarranties
+            .sorted { $0.purchasePrice > $1.purchasePrice }
+            .prefix(3))
+        return VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 6) {
+                Image(systemName: "crown.fill").foregroundStyle(Theme.accent).font(.system(size: 14))
+                Text("Most Valuable").font(.system(size: 15, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)
+            }
+            ForEach(Array(topItems.enumerated()), id: \.element.id) { idx, item in
+                HStack(spacing: 12) {
+                    Text("\(idx + 1)")
+                        .font(.system(size: 14, weight: .black, design: .rounded))
+                        .foregroundStyle(idx == 0 ? Theme.accent : Theme.sub)
+                        .frame(width: 24)
+                    Text(item.category.emoji).font(.system(size: 18))
+                        .frame(width: 36, height: 36)
+                        .background(item.category.color.opacity(0.15), in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(item.name).font(.system(size: 13, weight: .semibold, design: .rounded)).foregroundStyle(Theme.text).lineLimit(1)
+                        Text(item.store).font(.system(size: 11, design: .rounded)).foregroundStyle(Theme.sub)
+                    }
+                    Spacer()
+                    Text(String(format: "$%.0f", item.purchasePrice))
+                        .font(.system(size: 14, weight: .bold, design: .rounded))
+                        .foregroundStyle(Theme.accent)
+                }
+                .padding(.vertical, 2)
             }
         }
         .glowCard()
@@ -187,7 +254,10 @@ struct HomeContent: View {
 
     private var recentSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Recently Added").font(.system(size: 15, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)
+            HStack(spacing: 6) {
+                Image(systemName: "clock.arrow.circlepath").foregroundStyle(Theme.secondary).font(.system(size: 14))
+                Text("Recently Added").font(.system(size: 15, weight: .bold, design: .rounded)).foregroundStyle(Theme.text)
+            }
             ForEach(manager.recentWarranties) { item in
                 warrantyMiniRow(item)
             }
